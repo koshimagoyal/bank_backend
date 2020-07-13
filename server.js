@@ -1579,7 +1579,7 @@ app.post('/data/user/profileimage', function(req, res) {
     con.query(query, [req.body.id], function(err, result) {
         console.log(result);
         if (result[0].url != null) {
-            res.sendFile(result[0].url);
+            res.sendFile(__dirname + '/uploads/' + result[0].url);
         } else {
             res.send(result);
         }

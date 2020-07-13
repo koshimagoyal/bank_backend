@@ -1405,7 +1405,7 @@ app.post('/getOperationalAccountData', (req, res) => {
 //fetch user name
 app.post('/getUserData', (req, res) => {
     console.log(req.body);
-    let query = 'select adharNo, currentAddress,email,fatherName,landline,mobileNo1,mobileNo2,name,pan,permanentAddress from user where userId = ? and closeAccount = false;';
+    let query = 'select adharNo, currentAddress,email,fatherName,landline,mobileNo1,mobileNo2,name,pan,permanentAddress,profileImage from user where userId = ? and closeAccount = false;';
     con.query(query, [req.body.userId], function(err, result) {
         if (err) {
             res.status(400).json({

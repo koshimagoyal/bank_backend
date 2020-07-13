@@ -30,7 +30,7 @@ app.use(function(req, res, next) {
 // SET STORAGE
 var storage = multer.diskStorage({
     destination: function(req, file, cb) {
-        cb(null, process.cwd()+"/uploads")
+        cb(null, process.cwd() + "/uploads")
     },
     filename: function(req, file, cb) {
         cb(null, file.originalname);
@@ -1579,7 +1579,7 @@ app.post('/data/user/profileimage', function(req, res) {
     con.query(query, [req.body.id], function(err, result) {
         console.log(result);
         if (result[0].url != null) {
-            res.sendFile(__dirname + '/uploads/' + result[0].url);
+            res.sendFile(result[0].url);
         } else {
             res.send(result);
         }

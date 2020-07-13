@@ -39,7 +39,7 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage }).single('file');
 
-
+app.use(express.static(__dirname + '/uploads'));
 app.use("/", express.static(path.join(__dirname, "Angular")));
 
 //mysql connection check

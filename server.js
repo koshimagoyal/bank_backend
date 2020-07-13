@@ -30,7 +30,7 @@ app.use(function(req, res, next) {
 // SET STORAGE
 var storage = multer.diskStorage({
     destination: function(req, file, cb) {
-        cb(null, 'C:\\uploads')
+        cb(null, './uploads')
     },
     filename: function(req, file, cb) {
         cb(null, file.originalname);

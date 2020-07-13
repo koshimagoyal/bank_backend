@@ -63,7 +63,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<router-outlet></router-outlet>\r\n";
+    __webpack_exports__["default"] = "<router-outlet></router-outlet>\n";
     /***/
   },
 
@@ -1487,7 +1487,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! C:\Users\PRAKHAR\Documents\Angular Project\Koshima\Society_Banking\src\main.ts */
+    /*! C:\Users\Lenovo\Downloads\Society_Banking\src\main.ts */
     "./src/main.ts");
     /***/
   }

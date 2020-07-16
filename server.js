@@ -291,7 +291,7 @@ app.get('/getCashBank',(req,res)=>{
         }else{
             console.log(req.body);
             let query = `select sum(credit) as credit, sum(debit) as debit, bankName from account inner join 
-                         chequedetails on(account.chequeId=chequedetails.chequeId)
+                         chequedetails on(account.chequeId=chequeDetails.chequeId)
                          where type != "Transfer Cash" and loanId is null and 
                          bankName in (select nickname from bankAccount) group by bankName;`;
             con.query(query, function(err, resultData) {

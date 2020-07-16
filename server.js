@@ -1367,8 +1367,8 @@ app.post('/getData/chequeData', (req, res) => {
 //fetch loan details
 app.post('/generateEMI',(req,res)=>{
     console.log(req.body);
-    let query = 'select loanId, loanAmount, loanDuration, loanType, interest, userId from loan where closeLoan=false and interest!=0;';
-    con.query(query,function(err,resdata) {
+    let query = 'select loanId, loanAmount, loanDuration, loanType, interest, userId from loan where MONTH(date)<=? and YEAR(date)<=? and closeLoan = false and closeLoan=false and interest!=0;';
+    con.query(query,[req.body.month,req.body.year],function(err,resdata) {
         if(err){
             res.status(400).json({
                 failed: 'Unauthorized Access'

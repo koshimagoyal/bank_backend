@@ -502,7 +502,7 @@ let TablesService = class TablesService {
         console.log(getData);
         const data = getData.data;
         const ddate = getData.date;
-        const url = 'http://drsunitanayak.com:8080/sendDepositData';
+        const url = 'http://drsunitanayak.com/sendDepositData';
         const account = [];
         for (let j = 1; j < data.length; j++) {
             account.push([
@@ -528,7 +528,7 @@ let TablesService = class TablesService {
     sendLoanData(getData) {
         const data = getData.data;
         const ddate = getData.date;
-        const url = 'http://drsunitanayak.com:8080/sendLoanData';
+        const url = 'http://drsunitanayak.com/sendLoanData';
         const loan = [];
         const loanBook = [];
         for (let j = 1; j < data.length; j++) {
@@ -560,7 +560,7 @@ let TablesService = class TablesService {
         headers.append('Accept', 'application/json');
         headers.append('content-type', 'multipart/form-data');
         console.log(data);
-        const url = 'http://drsunitanayak.com:8080/sendExcel';
+        const url = 'http://drsunitanayak.com/sendExcel';
         return this.httpService.post(url, data, { headers });
     }
     getData() {
@@ -569,7 +569,7 @@ let TablesService = class TablesService {
         headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
         headers.append('Accept', 'application/json');
         headers.append('content-type', 'application/json');
-        const url = 'http://drsunitanayak.com:8080/monthYear';
+        const url = 'http://drsunitanayak.com/monthYear';
         return this.httpService.get(url, { headers });
     }
     getEmiData() {
@@ -578,7 +578,7 @@ let TablesService = class TablesService {
         headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
         headers.append('Accept', 'application/json');
         headers.append('content-type', 'application/json');
-        const url = 'http://drsunitanayak.com:8080/getLoanEmiData';
+        const url = 'http://drsunitanayak.com/getLoanEmiData';
         return this.httpService.get(url, { headers });
     }
     closeLoan(data) {
@@ -587,7 +587,7 @@ let TablesService = class TablesService {
         headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
         headers.append('Accept', 'application/json');
         headers.append('content-type', 'application/json');
-        const url = 'http://drsunitanayak.com:8080/sendLoanAutoCloseData';
+        const url = 'http://drsunitanayak.com/sendLoanAutoCloseData';
         const closeData = {
             closeData: data,
         };

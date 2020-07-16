@@ -790,7 +790,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           console.log(getData);
           var data = getData.data;
           var ddate = getData.date;
-          var url = 'http://drsunitanayak.com:8080/sendDepositData';
+          var url = 'http://drsunitanayak.com/sendDepositData';
           var account = [];
 
           for (var j = 1; j < data.length; j++) {
@@ -815,7 +815,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function sendLoanData(getData) {
           var data = getData.data;
           var ddate = getData.date;
-          var url = 'http://drsunitanayak.com:8080/sendLoanData';
+          var url = 'http://drsunitanayak.com/sendLoanData';
           var loan = [];
           var loanBook = [];
 
@@ -847,7 +847,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           headers.append('Accept', 'application/json');
           headers.append('content-type', 'multipart/form-data');
           console.log(data);
-          var url = 'http://drsunitanayak.com:8080/sendExcel';
+          var url = 'http://drsunitanayak.com/sendExcel';
           return this.httpService.post(url, data, {
             headers: headers
           });
@@ -860,7 +860,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
           headers.append('Accept', 'application/json');
           headers.append('content-type', 'application/json');
-          var url = 'http://drsunitanayak.com:8080/monthYear';
+          var url = 'http://drsunitanayak.com/monthYear';
           return this.httpService.get(url, {
             headers: headers
           });
@@ -873,7 +873,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
           headers.append('Accept', 'application/json');
           headers.append('content-type', 'application/json');
-          var url = 'http://drsunitanayak.com:8080/getLoanEmiData';
+          var url = 'http://drsunitanayak.com/getLoanEmiData';
           return this.httpService.get(url, {
             headers: headers
           });
@@ -886,7 +886,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
           headers.append('Accept', 'application/json');
           headers.append('content-type', 'application/json');
-          var url = 'http://drsunitanayak.com:8080/sendLoanAutoCloseData';
+          var url = 'http://drsunitanayak.com/sendLoanAutoCloseData';
           var closeData = {
             closeData: data
           };

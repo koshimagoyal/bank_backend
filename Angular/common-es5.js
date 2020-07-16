@@ -404,7 +404,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(UploadAllService, [{
         key: "getBankList",
         value: function getBankList() {
-          var url = 'http://drsunitanayak.com:8080/getBankList';
+          var url = 'http://drsunitanayak.com/getBankList';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -418,7 +418,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "sendData",
         value: function sendData(data) {
           console.log(data);
-          var url = 'http://drsunitanayak.com:8080/createUserAccount';
+          var url = 'http://drsunitanayak.com/createUserAccount';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -432,7 +432,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "sendBankData",
         value: function sendBankData(data) {
           console.log(data);
-          var url = 'http://drsunitanayak.com:8080/sendBankData';
+          var url = 'http://drsunitanayak.com/sendBankData';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -446,7 +446,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getLoanData",
         value: function getLoanData(data) {
           console.log(data);
-          var url = 'http://drsunitanayak.com:8080/getData/loanData';
+          var url = 'http://drsunitanayak.com/getData/loanData';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -460,7 +460,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getCreditData",
         value: function getCreditData(data) {
           console.log(data);
-          var url = 'http://drsunitanayak.com:8080/getData/creditData';
+          var url = 'http://drsunitanayak.com/getData/creditData';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -474,7 +474,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getDebitData",
         value: function getDebitData(data) {
           console.log(data);
-          var url = 'http://drsunitanayak.com:8080/getData/debitData';
+          var url = 'http://drsunitanayak.com/getData/debitData';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -488,7 +488,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getExpenseData",
         value: function getExpenseData(data) {
           console.log(data);
-          var url = 'http://drsunitanayak.com:8080/getData/expenseData';
+          var url = 'http://drsunitanayak.com/getData/expenseData';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -502,7 +502,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getCreditDebitExpenseData",
         value: function getCreditDebitExpenseData(data) {
           console.log(data);
-          var url = 'http://drsunitanayak.com:8080/getData/creditDebitExpenseData';
+          var url = 'http://drsunitanayak.com/getData/creditDebitExpenseData';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -516,7 +516,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getCashData",
         value: function getCashData(data) {
           console.log(data);
-          var url = 'http://drsunitanayak.com:8080/getData/cashData';
+          var url = 'http://drsunitanayak.com/getData/cashData';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -530,7 +530,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getChequeData",
         value: function getChequeData(data) {
           console.log(data);
-          var url = 'http://drsunitanayak.com:8080/getData/chequeData';
+          var url = 'http://drsunitanayak.com/getData/chequeData';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');

@@ -634,7 +634,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(MiscellaneousService, [{
         key: "getBankList",
         value: function getBankList() {
-          var url = 'http://drsunitanayak.com:8080/getBankList';
+          var url = 'http://drsunitanayak.com/getBankList';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -648,7 +648,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "searchCheque",
         value: function searchCheque(text) {
           console.log(text);
-          var url = 'http://drsunitanayak.com:8080/searchCheque';
+          var url = 'http://drsunitanayak.com/searchCheque';
           var data = {
             chequeNo: text
           };
@@ -658,14 +658,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "transferCash",
         value: function transferCash(data) {
           console.log(data);
-          var url = 'http://drsunitanayak.com:8080/transferCash';
+          var url = 'http://drsunitanayak.com/transferCash';
           return this.http.post(url, data);
         }
       }, {
         key: "withdrawCash",
         value: function withdrawCash(data) {
           console.log(data);
-          var url = 'http://drsunitanayak.com:8080/withdrawCash';
+          var url = 'http://drsunitanayak.com/withdrawCash';
           return this.http.post(url, data);
         }
       }]);

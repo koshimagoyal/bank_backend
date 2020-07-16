@@ -532,7 +532,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getData",
         value: function getData(text) {
           console.log(text);
-          var url = 'http://drsunitanayak.com:8080/getUserData';
+          var url = 'http://drsunitanayak.com/getUserData';
           var data = {
             userId: text
           };
@@ -542,7 +542,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "sendData",
         value: function sendData(data) {
           console.log(data);
-          var url = 'http://drsunitanayak.com:8080/updateUserData';
+          var url = 'http://drsunitanayak.com/updateUserData';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');

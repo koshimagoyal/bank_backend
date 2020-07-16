@@ -1240,7 +1240,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           headers.append('Accept', 'application/json');
           headers.append('content-type', 'application/json');
           console.log(data);
-          var url = 'http://drsunitanayak.com:8080/login';
+          var url = 'http://drsunitanayak.com/login';
           return this.httpService.post(url, data, {
             headers: headers
           });

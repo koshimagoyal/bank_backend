@@ -460,7 +460,7 @@ let NavigationService = class NavigationService {
         };
         console.log(body);
         this.http
-            .post('http://drsunitanayak.com:8080/data/user/profileimage', body, {
+            .post('http://drsunitanayak.com/data/user/profileimage', body, {
             observe: 'response',
             responseType: 'blob',
         })
@@ -560,7 +560,7 @@ let NavigationService = class NavigationService {
         };
         console.log(body);
         this.http
-            .post('http://drsunitanayak.com:8080/data/user/profileimage', body, {
+            .post('http://drsunitanayak.com/data/user/profileimage', body, {
             observe: 'response',
             responseType: 'blob',
         })

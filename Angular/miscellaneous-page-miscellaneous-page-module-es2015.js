@@ -427,7 +427,7 @@ let MiscellaneousService = class MiscellaneousService {
         this.http = http;
     }
     getBankList() {
-        const url = 'http://drsunitanayak.com:8080/getBankList';
+        const url = 'http://drsunitanayak.com/getBankList';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -437,7 +437,7 @@ let MiscellaneousService = class MiscellaneousService {
     }
     searchCheque(text) {
         console.log(text);
-        const url = 'http://drsunitanayak.com:8080/searchCheque';
+        const url = 'http://drsunitanayak.com/searchCheque';
         const data = {
             chequeNo: text,
         };
@@ -445,12 +445,12 @@ let MiscellaneousService = class MiscellaneousService {
     }
     transferCash(data) {
         console.log(data);
-        const url = 'http://drsunitanayak.com:8080/transferCash';
+        const url = 'http://drsunitanayak.com/transferCash';
         return this.http.post(url, data);
     }
     withdrawCash(data) {
         console.log(data);
-        const url = 'http://drsunitanayak.com:8080/withdrawCash';
+        const url = 'http://drsunitanayak.com/withdrawCash';
         return this.http.post(url, data);
     }
 };

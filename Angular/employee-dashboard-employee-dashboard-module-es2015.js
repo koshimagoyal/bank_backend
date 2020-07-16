@@ -252,7 +252,7 @@ let DashboardService = class DashboardService {
         const data = {
             userId: text,
         };
-        const url = 'http://drsunitanayak.com:8080/get/userData';
+        const url = 'http://drsunitanayak.com/get/userData';
         return this.httpService.post(url, data);
     }
 };

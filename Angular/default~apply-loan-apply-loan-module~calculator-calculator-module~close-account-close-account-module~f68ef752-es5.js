@@ -814,7 +814,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             id: userId
           };
           console.log(body);
-          this.http.post('http://drsunitanayak.com:8080/data/user/profileimage', body, {
+          this.http.post('http://drsunitanayak.com/data/user/profileimage', body, {
             observe: 'response',
             responseType: 'blob'
           }).subscribe(function (data) {
@@ -981,7 +981,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             id: userId
           };
           console.log(body);
-          this.http.post('http://drsunitanayak.com:8080/data/user/profileimage', body, {
+          this.http.post('http://drsunitanayak.com/data/user/profileimage', body, {
             observe: 'response',
             responseType: 'blob'
           }).subscribe(function (data) {

@@ -255,7 +255,7 @@ let LoanEligibleService = class LoanEligibleService {
     }
     getData(text) {
         console.log(text);
-        const url = 'http://drsunitanayak.com:8080/getEligibleData';
+        const url = 'http://drsunitanayak.com/getEligibleData';
         const data = {
             userId: text,
         };

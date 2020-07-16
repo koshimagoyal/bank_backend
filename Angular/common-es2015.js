@@ -235,7 +235,7 @@ let UploadAllService = class UploadAllService {
         this.httpService = httpService;
     }
     getBankList() {
-        const url = 'http://drsunitanayak.com:8080/getBankList';
+        const url = 'http://drsunitanayak.com/getBankList';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -245,7 +245,7 @@ let UploadAllService = class UploadAllService {
     }
     sendData(data) {
         console.log(data);
-        const url = 'http://drsunitanayak.com:8080/createUserAccount';
+        const url = 'http://drsunitanayak.com/createUserAccount';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -255,7 +255,7 @@ let UploadAllService = class UploadAllService {
     }
     sendBankData(data) {
         console.log(data);
-        const url = 'http://drsunitanayak.com:8080/sendBankData';
+        const url = 'http://drsunitanayak.com/sendBankData';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -265,7 +265,7 @@ let UploadAllService = class UploadAllService {
     }
     getLoanData(data) {
         console.log(data);
-        const url = 'http://drsunitanayak.com:8080/getData/loanData';
+        const url = 'http://drsunitanayak.com/getData/loanData';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -275,7 +275,7 @@ let UploadAllService = class UploadAllService {
     }
     getCreditData(data) {
         console.log(data);
-        const url = 'http://drsunitanayak.com:8080/getData/creditData';
+        const url = 'http://drsunitanayak.com/getData/creditData';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -285,7 +285,7 @@ let UploadAllService = class UploadAllService {
     }
     getDebitData(data) {
         console.log(data);
-        const url = 'http://drsunitanayak.com:8080/getData/debitData';
+        const url = 'http://drsunitanayak.com/getData/debitData';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -295,7 +295,7 @@ let UploadAllService = class UploadAllService {
     }
     getExpenseData(data) {
         console.log(data);
-        const url = 'http://drsunitanayak.com:8080/getData/expenseData';
+        const url = 'http://drsunitanayak.com/getData/expenseData';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -305,7 +305,7 @@ let UploadAllService = class UploadAllService {
     }
     getCreditDebitExpenseData(data) {
         console.log(data);
-        const url = 'http://drsunitanayak.com:8080/getData/creditDebitExpenseData';
+        const url = 'http://drsunitanayak.com/getData/creditDebitExpenseData';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -315,7 +315,7 @@ let UploadAllService = class UploadAllService {
     }
     getCashData(data) {
         console.log(data);
-        const url = 'http://drsunitanayak.com:8080/getData/cashData';
+        const url = 'http://drsunitanayak.com/getData/cashData';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -325,7 +325,7 @@ let UploadAllService = class UploadAllService {
     }
     getChequeData(data) {
         console.log(data);
-        const url = 'http://drsunitanayak.com:8080/getData/chequeData';
+        const url = 'http://drsunitanayak.com/getData/chequeData';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');

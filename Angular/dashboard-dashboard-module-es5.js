@@ -485,7 +485,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
           headers.append('Accept', 'application/json');
           headers.append('content-type', 'application/json');
-          var url = 'http://drsunitanayak.com:8080/getAllLoanData';
+          var url = 'http://drsunitanayak.com/getAllLoanData';
           return this.httpService.get(url, {
             headers: headers
           });
@@ -498,7 +498,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
           headers.append('Accept', 'application/json');
           headers.append('content-type', 'application/json');
-          var url = 'http://drsunitanayak.com:8080/getCashBank';
+          var url = 'http://drsunitanayak.com/getCashBank';
           return this.httpService.get(url, {
             headers: headers
           });
@@ -511,7 +511,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
           headers.append('Accept', 'application/json');
           headers.append('content-type', 'application/json');
-          var url = 'http://drsunitanayak.com:8080/getApprovalLoans';
+          var url = 'http://drsunitanayak.com/getApprovalLoans';
           return this.httpService.get(url, {
             headers: headers
           });
@@ -524,7 +524,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
           headers.append('Accept', 'application/json');
           headers.append('content-type', 'application/json');
-          var url = 'http://drsunitanayak.com:8080/approveLoan';
+          var url = 'http://drsunitanayak.com/approveLoan';
           return this.httpService.post(url, data, {
             headers: headers
           });
@@ -537,7 +537,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
           headers.append('Accept', 'application/json');
           headers.append('content-type', 'application/json');
-          var url = 'http://drsunitanayak.com:8080/rejectLoan';
+          var url = 'http://drsunitanayak.com/rejectLoan';
           return this.httpService.post(url, data, {
             headers: headers
           });

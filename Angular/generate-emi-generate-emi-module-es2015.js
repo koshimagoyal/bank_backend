@@ -333,7 +333,7 @@ let GenerateEmiService = class GenerateEmiService {
         headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
         headers.append('Accept', 'application/json');
         headers.append('content-type', 'application/json');
-        const url = 'http://drsunitanayak.com:8080/generateEMI';
+        const url = 'http://drsunitanayak.com/generateEMI';
         return this.httpService.post(url, data, { headers });
     }
 };

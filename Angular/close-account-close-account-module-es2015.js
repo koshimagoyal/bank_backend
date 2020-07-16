@@ -431,7 +431,7 @@ let CloseAccountService = class CloseAccountService {
     }
     getData(text) {
         console.log(text);
-        const url = 'http://drsunitanayak.com:8080/getCloseData';
+        const url = 'http://drsunitanayak.com/getCloseData';
         const data = {
             userId: text,
         };
@@ -439,7 +439,7 @@ let CloseAccountService = class CloseAccountService {
     }
     sendData(data) {
         console.log(data);
-        const url = 'http://drsunitanayak.com:8080/closeAccount';
+        const url = 'http://drsunitanayak.com/closeAccount';
         return this.http.post(url, data);
     }
 };

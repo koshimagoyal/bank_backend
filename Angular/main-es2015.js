@@ -566,7 +566,7 @@ let AuthService = class AuthService {
         headers.append('Accept', 'application/json');
         headers.append('content-type', 'application/json');
         console.log(data);
-        const url = 'http://drsunitanayak.com:8080/login';
+        const url = 'http://drsunitanayak.com/login';
         return this.httpService.post(url, data, { headers });
     }
 };

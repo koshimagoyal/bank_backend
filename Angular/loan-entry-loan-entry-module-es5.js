@@ -554,7 +554,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getData",
         value: function getData(text) {
           console.log(text);
-          var url = 'http://drsunitanayak.com:8080/getUserData';
+          var url = 'http://drsunitanayak.com/getUserData';
           var data = {
             userId: text
           };
@@ -563,7 +563,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getCorpusData",
         value: function getCorpusData() {
-          var url = 'http://drsunitanayak.com:8080/getCorpusData';
+          var url = 'http://drsunitanayak.com/getCorpusData';
           return this.http.get(url);
         }
       }, {
@@ -572,14 +572,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var data = {
             userId: text
           };
-          var url = 'http://drsunitanayak.com:8080/getUserLoanData';
+          var url = 'http://drsunitanayak.com/getUserLoanData';
           return this.http.post(url, data);
         }
       }, {
         key: "sendData",
         value: function sendData(data) {
           console.log(data);
-          var url = 'http://drsunitanayak.com:8080/sendLoanEntry';
+          var url = 'http://drsunitanayak.com/sendLoanEntry';
           return this.http.post(url, data);
         }
       }]);

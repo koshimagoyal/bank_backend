@@ -546,7 +546,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
           headers.append('Accept', 'application/json');
           headers.append('content-type', 'application/json');
-          var url = 'http://drsunitanayak.com:8080/generateEMI';
+          var url = 'http://drsunitanayak.com/generateEMI';
           return this.httpService.post(url, data, {
             headers: headers
           });

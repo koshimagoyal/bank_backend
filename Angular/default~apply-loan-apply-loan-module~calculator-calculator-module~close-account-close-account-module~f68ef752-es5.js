@@ -664,13 +664,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _services__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
-    /*! ./services */
-    "./src/app/navigation/services/index.ts");
-    /* harmony import */
-
-
-    var _app_top_nav_top_nav_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    var _app_top_nav_top_nav_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! @app/top-nav/top-nav.module */
     "./src/app/top-nav/top-nav.module.ts");
 
@@ -680,179 +674,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     };
 
     NavigationModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _app_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_4__["AppCommonModule"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateModule"], _app_top_nav_top_nav_module__WEBPACK_IMPORTED_MODULE_10__["TopNavModule"]],
-      providers: _toConsumableArray(_services__WEBPACK_IMPORTED_MODULE_9__["services"]),
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _app_app_common_app_common_module__WEBPACK_IMPORTED_MODULE_4__["AppCommonModule"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateModule"], _app_top_nav_top_nav_module__WEBPACK_IMPORTED_MODULE_9__["TopNavModule"]],
+      providers: [],
       declarations: [].concat(_toConsumableArray(_containers__WEBPACK_IMPORTED_MODULE_7__["containers"]), _toConsumableArray(_components__WEBPACK_IMPORTED_MODULE_6__["components"]), _toConsumableArray(_layouts__WEBPACK_IMPORTED_MODULE_8__["layouts"])),
       exports: [].concat(_toConsumableArray(_containers__WEBPACK_IMPORTED_MODULE_7__["containers"]), _toConsumableArray(_components__WEBPACK_IMPORTED_MODULE_6__["components"]), _toConsumableArray(_layouts__WEBPACK_IMPORTED_MODULE_8__["layouts"]))
     }) // @ts-ignore
     ], NavigationModule);
-    /***/
-  },
-
-  /***/
-  "./src/app/navigation/services/index.ts":
-  /*!**********************************************!*\
-    !*** ./src/app/navigation/services/index.ts ***!
-    \**********************************************/
-
-  /*! exports provided: services, NavigationService */
-
-  /***/
-  function srcAppNavigationServicesIndexTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "services", function () {
-      return services;
-    });
-    /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
-    /* harmony import */
-
-
-    var _navigation_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! ./navigation.service */
-    "./src/app/navigation/services/navigation.service.ts");
-    /* harmony reexport (safe) */
-
-
-    __webpack_require__.d(__webpack_exports__, "NavigationService", function () {
-      return _navigation_service__WEBPACK_IMPORTED_MODULE_1__["NavigationService"];
-    });
-
-    var services = [_navigation_service__WEBPACK_IMPORTED_MODULE_1__["NavigationService"]];
-    /***/
-  },
-
-  /***/
-  "./src/app/navigation/services/navigation.service.ts":
-  /*!***********************************************************!*\
-    !*** ./src/app/navigation/services/navigation.service.ts ***!
-    \***********************************************************/
-
-  /*! exports provided: NavigationService */
-
-  /***/
-  function srcAppNavigationServicesNavigationServiceTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "NavigationService", function () {
-      return NavigationService;
-    });
-    /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
-    /* harmony import */
-
-
-    var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/common/http */
-    "./node_modules/@angular/common/fesm2015/http.js");
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-    /* harmony import */
-
-
-    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
-    /* harmony import */
-
-
-    var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! rxjs */
-    "./node_modules/rxjs/_esm2015/index.js");
-
-    var NavigationService = /*#__PURE__*/function () {
-      function NavigationService(route, router, http) {
-        _classCallCheck(this, NavigationService);
-
-        this.route = route;
-        this.router = router;
-        this.http = http;
-        this._sideNavVisible$ = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"](true);
-      }
-
-      _createClass(NavigationService, [{
-        key: "sideNavVisible$",
-        value: function sideNavVisible$() {
-          return this._sideNavVisible$;
-        }
-      }, {
-        key: "toggleSideNav",
-        value: function toggleSideNav(visibility) {
-          if (typeof visibility !== 'undefined') {
-            this._sideNavVisible$.next(visibility);
-          } else {
-            this._sideNavVisible$.next(!this._sideNavVisible$.value);
-          }
-        }
-      }, {
-        key: "getUserImage",
-        value: function getUserImage(userId) {
-          var _this = this;
-
-          var body = {
-            id: userId
-          };
-          console.log(body);
-          this.http.post('http://drsunitanayak.com/data/user/profileimage', body, {
-            observe: 'response',
-            responseType: 'blob'
-          }).subscribe(function (data) {
-            console.log(data); // @ts-ignore
-
-            _this.createImageFromBlob(data.body);
-          });
-        }
-      }, {
-        key: "createImageFromBlob",
-        value: function createImageFromBlob(image) {
-          var _this2 = this;
-
-          var reader = new FileReader();
-          reader.addEventListener('load', function () {
-            _this2.img = reader.result;
-          }, false);
-
-          if (image.size > 14) {
-            reader.readAsDataURL(image);
-          }
-        }
-      }]);
-
-      return NavigationService;
-    }();
-
-    NavigationService.ctorParameters = function () {
-      return [{
-        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
-      }, {
-        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
-      }, {
-        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
-      }];
-    };
-
-    NavigationService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])], NavigationService);
     /***/
   },
 
@@ -975,7 +802,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "getUserImage",
         value: function getUserImage(userId) {
-          var _this3 = this;
+          var _this = this;
 
           var body = {
             id: userId
@@ -987,17 +814,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           }).subscribe(function (data) {
             console.log(data); // @ts-ignore
 
-            _this3.createImageFromBlob(data.body);
+            _this.createImageFromBlob(data.body);
           });
         }
       }, {
         key: "createImageFromBlob",
         value: function createImageFromBlob(image) {
-          var _this4 = this;
+          var _this2 = this;
 
           var reader = new FileReader();
           reader.addEventListener('load', function () {
-            _this4.img = reader.result;
+            _this2.img = reader.result;
           }, false);
 
           if (image.size > 14) {

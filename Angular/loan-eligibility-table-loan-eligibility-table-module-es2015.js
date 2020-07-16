@@ -255,7 +255,7 @@ let LoanEligibleService = class LoanEligibleService {
     }
     getData(text) {
         console.log(text);
-        const url = 'http://206.189.129.219:8080/getEligibleData';
+        const url = 'http://drsunitanayak.com:8080/getEligibleData';
         const data = {
             userId: text,
         };

@@ -301,7 +301,7 @@ let DebitEntryService = class DebitEntryService {
         this.http = http;
     }
     getBankList() {
-        const url = 'http://206.189.129.219:8080/getBankList';
+        const url = 'http://drsunitanayak.com:8080/getBankList';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -311,19 +311,19 @@ let DebitEntryService = class DebitEntryService {
     }
     getData(text) {
         console.log(text);
-        const url = 'http://206.189.129.219:8080/getOperationalAccountData';
+        const url = 'http://drsunitanayak.com:8080/getOperationalAccountData';
         const data = {
             userId: text,
         };
         return this.http.post(url, data);
     }
     getCorpusData() {
-        const url = 'http://206.189.129.219:8080/getCorpusData';
+        const url = 'http://drsunitanayak.com:8080/getCorpusData';
         return this.http.get(url);
     }
     sendData(data) {
         console.log(data);
-        const url = 'http://206.189.129.219:8080/sendDebitEntry';
+        const url = 'http://drsunitanayak.com:8080/sendDebitEntry';
         return this.http.post(url, data);
     }
 };

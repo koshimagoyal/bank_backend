@@ -323,7 +323,7 @@ let ProfileService = class ProfileService {
     }
     getData(text) {
         console.log(text);
-        const url = 'http://206.189.129.219:8080/getUserData';
+        const url = 'http://drsunitanayak.com:8080/getUserData';
         const data = {
             userId: text,
         };
@@ -331,7 +331,7 @@ let ProfileService = class ProfileService {
     }
     sendData(data) {
         console.log(data);
-        const url = 'http://206.189.129.219:8080/updateUserData';
+        const url = 'http://drsunitanayak.com:8080/updateUserData';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');

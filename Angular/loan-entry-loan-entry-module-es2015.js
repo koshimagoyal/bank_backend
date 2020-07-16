@@ -348,26 +348,26 @@ let LoanEntryService = class LoanEntryService {
     }
     getData(text) {
         console.log(text);
-        const url = 'http://206.189.129.219:8080/getUserData';
+        const url = 'http://drsunitanayak.com:8080/getUserData';
         const data = {
             userId: text,
         };
         return this.http.post(url, data);
     }
     getCorpusData() {
-        const url = 'http://206.189.129.219:8080/getCorpusData';
+        const url = 'http://drsunitanayak.com:8080/getCorpusData';
         return this.http.get(url);
     }
     getAllData(text) {
         const data = {
             userId: text,
         };
-        const url = 'http://206.189.129.219:8080/getUserLoanData';
+        const url = 'http://drsunitanayak.com:8080/getUserLoanData';
         return this.http.post(url, data);
     }
     sendData(data) {
         console.log(data);
-        const url = 'http://206.189.129.219:8080/sendLoanEntry';
+        const url = 'http://drsunitanayak.com:8080/sendLoanEntry';
         return this.http.post(url, data);
     }
 };

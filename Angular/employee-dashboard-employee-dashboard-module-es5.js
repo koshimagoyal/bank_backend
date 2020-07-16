@@ -421,7 +421,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var data = {
             userId: text
           };
-          var url = 'http://206.189.129.219:8080/get/userData';
+          var url = 'http://drsunitanayak.com:8080/get/userData';
           return this.httpService.post(url, data);
         }
       }]);

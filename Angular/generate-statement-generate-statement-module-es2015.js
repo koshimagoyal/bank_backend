@@ -981,14 +981,14 @@ let GenerateStatementService = class GenerateStatementService {
     }
     getData(text) {
         console.log(text);
-        const url = 'http://206.189.129.219:8080/getOperationalAccountData';
+        const url = 'http://drsunitanayak.com:8080/getOperationalAccountData';
         const data = {
             userId: text,
         };
         return this.http.post(url, data);
     }
     getDialogData(data) {
-        const url = 'http://206.189.129.219:8080/getAllUserData';
+        const url = 'http://drsunitanayak.com:8080/getAllUserData';
         return this.http.post(url, data);
     }
 };

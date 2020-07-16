@@ -306,6 +306,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {
           var _this = this;
 
+          this.formData = new FormData();
           var user = this.session.retrieve('user');
           this.employeeId = user.id;
           this.service.getData(this.employeeId).subscribe(function (result) {
@@ -351,6 +352,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "send",
         value: function send() {
+          var _this2 = this;
+
           var data = {
             userId: this.employeeId,
             name: this.employeeName,
@@ -377,6 +380,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               sweetalert2_dist_sweetalert2_js__WEBPACK_IMPORTED_MODULE_4___default.a.fire({
                 text: 'Sent!',
                 icon: 'success'
+              }).then(function (isConfirm) {
+                if (isConfirm) {
+                  _this2.formData = new FormData();
+                  window.location.reload();
+                }
               });
             }
           }, function (error1) {
@@ -390,7 +398,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "onSelectFile",
         value: function onSelectFile(event) {
-          var _this2 = this;
+          var _this3 = this;
 
           if (event.target.files && event.target.files[0]) {
             var reader = new FileReader();
@@ -399,7 +407,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             reader.onload = function (e) {
               // called once readAsDataURL is completed
               // @ts-ignore
-              _this2.url = e.target.result;
+              _this3.url = e.target.result;
             }; // @ts-ignore
 
 
@@ -524,7 +532,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getData",
         value: function getData(text) {
           console.log(text);
-          var url = 'http://206.189.129.219:8080/getUserData';
+          var url = 'http://drsunitanayak.com:8080/getUserData';
           var data = {
             userId: text
           };
@@ -534,7 +542,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "sendData",
         value: function sendData(data) {
           console.log(data);
-          var url = 'http://206.189.129.219:8080/updateUserData';
+          var url = 'http://drsunitanayak.com:8080/updateUserData';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');

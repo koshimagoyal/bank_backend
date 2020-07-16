@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<span [ngClass]='{\"sb-nav-fixed\": !static}'>\n    <sb-top-nav></sb-top-nav>\n    <div id=\"layoutSidenav\">\n        <div id=\"layoutSidenav_nav\">\n            <nav class=\"sb-sidenav accordion\" id=\"sidenavAccordion\" [ngClass]=\"sidenavStyle\">\n                <div class=\"sb-sidenav-menu\">\n                    <div class=\"nav\">\n                        <!--dashboard menu-->\n                        <div>\n                            <div class=\"sb-sidenav-menu-heading\">{{'Common.SideNav.Heading1'| translate}}</div>\n                            <div>\n                                <a class=\"nav-link\" [routerLink]=\"['/emp-dashboard']\" (click)=\"expanded = !expanded\" [ngClass]=\"{active: isActive, collapsed: !expanded}\">\n                                    <div class=\"sb-nav-link-icon\">\n                                        <fa-icon [icon]='[\"fas\", \"tachometer-alt\"]'></fa-icon>\n                                    </div>{{'Common.Title'| translate}}\n                                </a>\n                            </div>\n                        </div>\n                        <!--layouts menu-->\n                        <div>\n                            <div class=\"sb-sidenav-menu-heading\">{{'Common.SideNav.Heading2'| translate}}</div>\n                            <div>\n                                <a class=\"nav-link\" [routerLink]=\"['/loan-eligibility-table']\" (click)=\"expanded = !expanded\" [ngClass]=\"{active: isActive, collapsed: !expanded}\">\n                                    {{'Employee.Pages.Eligible'| translate}}\n                                </a>\n                            </div>\n                            <div>\n                                <a class=\"nav-link\" href=\"/calculator\" (click)=\"expanded = !expanded\" [ngClass]=\"{active: isActive, collapsed: !expanded}\">\n                                    {{'Employee.Pages.Calculator'| translate}}\n                                </a>\n                            </div>\n                            <div>\n                                <a class=\"nav-link\" [routerLink]=\"['/apply-loan']\" (click)=\"expanded = !expanded\" [ngClass]=\"{active: isActive, collapsed: !expanded}\">\n                                    {{'Employee.Pages.Apply'| translate}}\n                                </a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            <div class=\"sb-sidenav-footer\">\n            <div class=\"small\">{{'Common.User.LoggedIn'|translate}}</div>\n                <span>{{user.name}}</span>\n            </div>\n        </nav>\n        </div>\n        <div id=\"layoutSidenav_content\">\n            <main>\n                <div class=\"container-fluid\"><ng-content></ng-content></div>\n            </main>\n            <sb-footer></sb-footer>\n        </div>\n    </div>\n</span>\n\n";
+    __webpack_exports__["default"] = "<span [ngClass]='{\"sb-nav-fixed\": !static}'>\n    <sb-top-nav></sb-top-nav>\n    <div id=\"layoutSidenav\">\n        <div id=\"layoutSidenav_nav\">\n            <nav class=\"sb-sidenav accordion\" id=\"sidenavAccordion\" [ngClass]=\"sidenavStyle\">\n                <div class=\"sb-sidenav-menu\">\n                    <div class=\"nav\">\n                        <!--dashboard menu-->\n                        <div>\n                            <div class=\"sb-sidenav-menu-heading\">{{'Common.SideNav.Heading1'| translate}}</div>\n                            <div>\n                                <a class=\"nav-link\" [routerLink]=\"['/employee-dashboard']\" (click)=\"expanded = !expanded\" [ngClass]=\"{active: isActive, collapsed: !expanded}\">\n                                    <div class=\"sb-nav-link-icon\">\n                                        <fa-icon [icon]='[\"fas\", \"tachometer-alt\"]'></fa-icon>\n                                    </div>{{'Common.Title'| translate}}\n                                </a>\n                            </div>\n                        </div>\n                        <!--layouts menu-->\n                        <div>\n                            <div class=\"sb-sidenav-menu-heading\">{{'Common.SideNav.Heading2'| translate}}</div>\n                            <div>\n                                <a class=\"nav-link\" [routerLink]=\"['/loan-eligibility-table']\" (click)=\"expanded = !expanded\" [ngClass]=\"{active: isActive, collapsed: !expanded}\">\n                                    {{'Employee.Pages.Eligible'| translate}}\n                                </a>\n                            </div>\n                            <div>\n                                <a class=\"nav-link\" href=\"/calculator\" (click)=\"expanded = !expanded\" [ngClass]=\"{active: isActive, collapsed: !expanded}\">\n                                    {{'Employee.Pages.Calculator'| translate}}\n                                </a>\n                            </div>\n                            <div>\n                                <a class=\"nav-link\" [routerLink]=\"['/apply-loan']\" (click)=\"expanded = !expanded\" [ngClass]=\"{active: isActive, collapsed: !expanded}\">\n                                    {{'Employee.Pages.Apply'| translate}}\n                                </a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            <div class=\"sb-sidenav-footer\">\n            <div class=\"small\">{{'Common.User.LoggedIn'|translate}}</div>\n                <span>{{user.name}}</span>\n            </div>\n        </nav>\n        </div>\n        <div id=\"layoutSidenav_content\">\n            <main>\n                <div class=\"container-fluid\"><ng-content></ng-content></div>\n            </main>\n            <sb-footer></sb-footer>\n        </div>\n    </div>\n</span>\n\n";
     /***/
   },
 
@@ -404,7 +404,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(UploadAllService, [{
         key: "getBankList",
         value: function getBankList() {
-          var url = 'http://206.189.129.219:8080/getBankList';
+          var url = 'http://drsunitanayak.com:8080/getBankList';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -418,7 +418,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "sendData",
         value: function sendData(data) {
           console.log(data);
-          var url = 'http://206.189.129.219:8080/createUserAccount';
+          var url = 'http://drsunitanayak.com:8080/createUserAccount';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -432,7 +432,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "sendBankData",
         value: function sendBankData(data) {
           console.log(data);
-          var url = 'http://206.189.129.219:8080/sendBankData';
+          var url = 'http://drsunitanayak.com:8080/sendBankData';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -446,7 +446,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getLoanData",
         value: function getLoanData(data) {
           console.log(data);
-          var url = 'http://206.189.129.219:8080/getData/loanData';
+          var url = 'http://drsunitanayak.com:8080/getData/loanData';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -460,7 +460,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getCreditData",
         value: function getCreditData(data) {
           console.log(data);
-          var url = 'http://206.189.129.219:8080/getData/creditData';
+          var url = 'http://drsunitanayak.com:8080/getData/creditData';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -474,7 +474,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getDebitData",
         value: function getDebitData(data) {
           console.log(data);
-          var url = 'http://206.189.129.219:8080/getData/debitData';
+          var url = 'http://drsunitanayak.com:8080/getData/debitData';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -488,7 +488,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getExpenseData",
         value: function getExpenseData(data) {
           console.log(data);
-          var url = 'http://206.189.129.219:8080/getData/expenseData';
+          var url = 'http://drsunitanayak.com:8080/getData/expenseData';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -502,7 +502,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getCreditDebitExpenseData",
         value: function getCreditDebitExpenseData(data) {
           console.log(data);
-          var url = 'http://206.189.129.219:8080/getData/creditDebitExpenseData';
+          var url = 'http://drsunitanayak.com:8080/getData/creditDebitExpenseData';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -516,7 +516,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getCashData",
         value: function getCashData(data) {
           console.log(data);
-          var url = 'http://206.189.129.219:8080/getData/cashData';
+          var url = 'http://drsunitanayak.com:8080/getData/cashData';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -530,7 +530,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getChequeData",
         value: function getChequeData(data) {
           console.log(data);
-          var url = 'http://206.189.129.219:8080/getData/chequeData';
+          var url = 'http://drsunitanayak.com:8080/getData/chequeData';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');

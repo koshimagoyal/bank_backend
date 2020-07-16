@@ -1265,7 +1265,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "getData",
         value: function getData(text) {
           console.log(text);
-          var url = 'http://206.189.129.219:8080/getOperationalAccountData';
+          var url = 'http://drsunitanayak.com:8080/getOperationalAccountData';
           var data = {
             userId: text
           };
@@ -1274,7 +1274,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "getDialogData",
         value: function getDialogData(data) {
-          var url = 'http://206.189.129.219:8080/getAllUserData';
+          var url = 'http://drsunitanayak.com:8080/getAllUserData';
           return this.http.post(url, data);
         }
       }]);

@@ -670,7 +670,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getData",
         value: function getData(text) {
           console.log(text);
-          var url = 'http://206.189.129.219:8080/getCloseData';
+          var url = 'http://drsunitanayak.com:8080/getCloseData';
           var data = {
             userId: text
           };
@@ -680,7 +680,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "sendData",
         value: function sendData(data) {
           console.log(data);
-          var url = 'http://206.189.129.219:8080/closeAccount';
+          var url = 'http://drsunitanayak.com:8080/closeAccount';
           return this.http.post(url, data);
         }
       }]);

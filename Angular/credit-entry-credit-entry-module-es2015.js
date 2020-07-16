@@ -288,19 +288,19 @@ let CreditEntryService = class CreditEntryService {
     }
     getData(text) {
         console.log(text);
-        const url = 'http://206.189.129.219:8080/getOperationalAccountData';
+        const url = 'http://drsunitanayak.com:8080/getOperationalAccountData';
         const data = {
             userId: text,
         };
         return this.http.post(url, data);
     }
     getCorpusData() {
-        const url = 'http://206.189.129.219:8080/getCorpusData';
+        const url = 'http://drsunitanayak.com:8080/getCorpusData';
         return this.http.get(url);
     }
     sendData(data) {
         console.log(data);
-        const url = 'http://206.189.129.219:8080/sendCreditEntry';
+        const url = 'http://drsunitanayak.com:8080/sendCreditEntry';
         return this.http.post(url, data);
     }
 };

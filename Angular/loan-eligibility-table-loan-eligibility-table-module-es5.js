@@ -434,7 +434,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getData",
         value: function getData(text) {
           console.log(text);
-          var url = 'http://206.189.129.219:8080/getEligibleData';
+          var url = 'http://drsunitanayak.com:8080/getEligibleData';
           var data = {
             userId: text
           };

@@ -223,7 +223,7 @@ let ApplyLoanService = class ApplyLoanService {
     }
     sendData(data) {
         console.log(data);
-        const url = 'http://206.189.129.219:8080/sendLoanEntry';
+        const url = 'http://drsunitanayak.com:8080/sendLoanEntry';
         return this.http.post(url, data);
     }
 };

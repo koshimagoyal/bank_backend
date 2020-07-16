@@ -385,7 +385,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "sendData",
         value: function sendData(data) {
           console.log(data);
-          var url = 'http://206.189.129.219:8080/sendLoanEntry';
+          var url = 'http://drsunitanayak.com:8080/sendLoanEntry';
           return this.http.post(url, data);
         }
       }]);

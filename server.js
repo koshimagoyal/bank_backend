@@ -42,6 +42,7 @@ var upload = multer({ storage: storage }).single('file');
 app.use(express.static(__dirname + '/uploads'));
 app.use("/", express.static(path.join(__dirname, "Angular")));
 
+
 //mysql connection check
 function handleDisconnect() {
     //mysql configuration
@@ -255,7 +256,7 @@ app.post('/sendLoanData', (req, res) => {
 //send excel loan data to server
 app.get('/getLoanEmiData', (req, res) => {
     console.log(req.body);
-    let query = 'select account.loanId as loanId, count(*) as month, loanDuration from account inner join loan on(account.loanId=loan.loanId) where type=? and closeLoan=false and interest!=0 group by(account.userId);';
+    let query = 'select account.loanId as loanId, count(*) as month, loanDuration from account inner join loan on(account.loanId=loan.loanId) where type=? and closeLoan=false and interest!=0 group by account.loanId;';
     con.query(query, ['EMI'], function(err, result) {
         if (err) {
             console.log(err);
@@ -1421,29 +1422,47 @@ app.post('/getUserData', (req, res) => {
 
 app.post('/updateUserData', (req, res) => {
     console.log(req.body);
-    upload(req, res, function(err) {
+    upload(req,res,function(err) {
         console.log(req.file);
-        console.log(req.file.path);
         console.log(req.body.data);
         let data = JSON.parse(req.body.data);
         console.log(data);
-        let query = `update user set adharNo=?,
+        if (!req.file) {
+            let query = `update user set adharNo=?,
+                 currentAddress=?,email=?,fatherName=?,landline=?,
+                 mobileNo1=?,mobileNo2=?,name=?,pan=?,permanentAddress=?
+                 where userId = ?;`;
+            con.query(query,[data.adharNo,data.currentAddress,data.email,data.father,data.landline,data.mobile1,
+                data.mobile2,data.name,data.pan,data.permanentAddress,data.userId],function(err,result) {
+                if(err){
+                    res.status(400).json({
+                        failed: 'Unauthorized Access'
+                    });
+                }else{
+                    res.status(200).json({
+                        nameData: result,
+                    });
+                }
+            });
+        } else {
+	    console.log(req.file.path);
+            let query = `update user set adharNo=?,
                  currentAddress=?,email=?,fatherName=?,landline=?,
                  mobileNo1=?,mobileNo2=?,name=?,pan=?,permanentAddress=?,profileImage=?
                  where userId = ?;`;
-        con.query(query, [data.adharNo, data.currentAddress, data.email, data.father, data.landline, data.mobile1,
-            data.mobile2, data.name, data.pan, data.permanentAddress, req.file.path, data.userId
-        ], function(err, result) {
-            if (err) {
-                res.status(400).json({
-                    failed: 'Unauthorized Access'
-                });
-            } else {
-                res.status(200).json({
-                    nameData: result,
-                });
-            }
-        });
+            con.query(query,[data.adharNo,data.currentAddress,data.email,data.father,data.landline,data.mobile1,
+                data.mobile2,data.name,data.pan,data.permanentAddress,req.file.path,data.userId],function(err,result) {
+                if(err){
+                    res.status(400).json({
+                        failed: 'Unauthorized Access'
+                    });
+                }else{
+                    res.status(200).json({
+                        nameData: result,
+                    });
+                }
+            });
+        }
     });
 });
 
@@ -1824,8 +1843,8 @@ app.post('/transferCash', (req, res) => {
                 failed: 'Unauthorized Access'
             });
         } else {
-            query = 'select chequeId from chequeDetails where bankName=? and chequeDate=? and chequeNo=?;';
-            con.query(query, [req.body.bankName, 0, 0], function(err, resData) {
+            query = 'select chequeId from chequeDetails where bankName=? and chequeNo=?;';
+            con.query(query, [req.body.bankName, "xxxxxxxx"], function(err, resData) {
                 if (err) {
                     console.log(err);
                     res.status(401).json({
@@ -1834,16 +1853,16 @@ app.post('/transferCash', (req, res) => {
                 } else {
                     console.log(resData);
                     if (resData.length === 0) {
-                        query = 'insert into chequeDetails (bankName,chequeDate,chequeNo) values (?,?,?);';
-                        con.query(query, [req.body.bankName, 0, 0], function(err, r) {
+                        query = 'insert into chequeDetails (bankName,chequeNo) values (?,?);';
+                        con.query(query, [req.body.bankName, "xxxxxxxx"], function(err, r) {
                             if (err) {
                                 console.log(err);
                                 res.status(401).json({
                                     failed: 'Unauthorized Access'
                                 });
                             } else {
-                                query = 'select chequeId from chequeDetails where bankName=? and chequeDate=? and chequeNo=?;';
-                                con.query(query, [req.body.bankName, 0, 0], function(err, rData) {
+                                query = 'select chequeId from chequeDetails where bankName=? and chequeNo=?;';
+                                con.query(query, [req.body.bankName, "xxxxxxxx"], function(err, rData) {
                                     if (err) {
                                         console.log(err);
                                         res.status(401).json({
@@ -1934,6 +1953,16 @@ app.post('/withdrawCash', (req, res) => {
             });
         }
     });
+});
+
+app.use(function(req, res, next) {
+    next();
+});
+
+
+
+app.use((req, res, next) => {
+    res.sendFile(path.join(__dirname, "Angular", "index.html"));
 });
 
 

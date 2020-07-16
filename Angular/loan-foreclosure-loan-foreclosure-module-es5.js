@@ -838,7 +838,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(LoanForeclosureService, [{
         key: "getBankList",
         value: function getBankList() {
-          var url = 'http://206.189.129.219:8080/getBankList';
+          var url = 'http://drsunitanayak.com:8080/getBankList';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           headers.append('Access-Control-Allow-Origin', '*');
           headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -852,14 +852,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "getData",
         value: function getData(data) {
           console.log(data);
-          var url = 'http://206.189.129.219:8080/getLoanData';
+          var url = 'http://drsunitanayak.com:8080/getLoanData';
           return this.http.post(url, data);
         }
       }, {
         key: "sendData",
         value: function sendData(data) {
           console.log(data);
-          var url = 'http://206.189.129.219:8080/sendLoanForeCloseData';
+          var url = 'http://drsunitanayak.com:8080/sendLoanForeCloseData';
           var closeData = {
             closeData: data
           };

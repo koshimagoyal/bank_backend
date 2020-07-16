@@ -315,7 +315,7 @@ let ExpenseCorpusService = class ExpenseCorpusService {
         this.http = http;
     }
     getBankList() {
-        const url = 'http://206.189.129.219:8080/getBankList';
+        const url = 'http://drsunitanayak.com:8080/getBankList';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -325,7 +325,7 @@ let ExpenseCorpusService = class ExpenseCorpusService {
     }
     sendData(data) {
         console.log(data);
-        const url = 'http://206.189.129.219:8080/sendDebitEntry';
+        const url = 'http://drsunitanayak.com:8080/sendDebitEntry';
         return this.http.post(url, data);
     }
 };

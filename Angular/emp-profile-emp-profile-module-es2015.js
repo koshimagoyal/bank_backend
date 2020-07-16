@@ -160,6 +160,7 @@ let EmpProfileComponent = class EmpProfileComponent {
         });
     }
     ngOnInit() {
+        this.formData = new FormData();
         const user = this.session.retrieve('user');
         this.employeeId = user.id;
         this.service.getData(this.employeeId).subscribe(result => {
@@ -229,6 +230,11 @@ let EmpProfileComponent = class EmpProfileComponent {
                 sweetalert2_dist_sweetalert2_js__WEBPACK_IMPORTED_MODULE_4___default.a.fire({
                     text: 'Sent!',
                     icon: 'success',
+                }).then((isConfirm) => {
+                    if (isConfirm) {
+                        this.formData = new FormData();
+                        window.location.reload();
+                    }
                 });
             }
         }, error1 => {
@@ -317,7 +323,7 @@ let ProfileService = class ProfileService {
     }
     getData(text) {
         console.log(text);
-        const url = 'http://206.189.129.219:8080/getUserData';
+        const url = 'http://drsunitanayak.com:8080/getUserData';
         const data = {
             userId: text,
         };
@@ -325,7 +331,7 @@ let ProfileService = class ProfileService {
     }
     sendData(data) {
         console.log(data);
-        const url = 'http://206.189.129.219:8080/updateUserData';
+        const url = 'http://drsunitanayak.com:8080/updateUserData';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');

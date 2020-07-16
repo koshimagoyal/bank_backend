@@ -427,7 +427,7 @@ let MiscellaneousService = class MiscellaneousService {
         this.http = http;
     }
     getBankList() {
-        const url = 'http://206.189.129.219:8080/getBankList';
+        const url = 'http://drsunitanayak.com:8080/getBankList';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT');
@@ -437,7 +437,7 @@ let MiscellaneousService = class MiscellaneousService {
     }
     searchCheque(text) {
         console.log(text);
-        const url = 'http://206.189.129.219:8080/searchCheque';
+        const url = 'http://drsunitanayak.com:8080/searchCheque';
         const data = {
             chequeNo: text,
         };
@@ -445,12 +445,12 @@ let MiscellaneousService = class MiscellaneousService {
     }
     transferCash(data) {
         console.log(data);
-        const url = 'http://206.189.129.219:8080/transferCash';
+        const url = 'http://drsunitanayak.com:8080/transferCash';
         return this.http.post(url, data);
     }
     withdrawCash(data) {
         console.log(data);
-        const url = 'http://206.189.129.219:8080/withdrawCash';
+        const url = 'http://drsunitanayak.com:8080/withdrawCash';
         return this.http.post(url, data);
     }
 };
